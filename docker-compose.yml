@@ -1,0 +1,5 @@
+slave:
+    image: orbweb/jenkins-slave
+    command: "http://localhost:8080/computer/myslave/slave-agent.jnlp"
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
