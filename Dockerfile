@@ -58,7 +58,8 @@ RUN			curl https://get.docker.com/builds/Linux/x86_64/docker-1.10.0 > /usr/local
 			chmod +x /usr/local/bin/docker
 
 RUN			apt-get update && \
-			apt-get install -y git python-pip tree && \
-			rm -rf /var/lib/apt/lists/*
+			apt-get install -y git python-pip tree zip && \
+			rm -rf /var/lib/apt/lists/* && \
+			pip install awscli
 
 ENTRYPOINT	["java", "-jar", "slave.jar", "-jnlpUrl"]
