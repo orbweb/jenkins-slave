@@ -58,7 +58,7 @@ RUN			curl https://get.docker.com/builds/Linux/x86_64/docker-1.10.0 > /usr/local
 			chmod +x /usr/local/bin/docker
 
 RUN			apt-get update && \
-			apt-get install -y git python-pip && \
+			apt-get install -y git python-pip tree && \
 			rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT	["java", "-jar", "slave.jar", "-jnlpUrl"]
